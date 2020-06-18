@@ -1,0 +1,129 @@
+import turtle
+from turtle import *
+from random import randint
+import time
+
+speed(0)
+penup()
+goto (-140, 140)
+
+for lane in range (6):
+  write(lane, align = 'center')
+  right(90)
+  forward(10)
+  pendown()
+  forward(200)
+  penup()
+  backward(210)
+  left(90)
+  forward(20)
+  
+
+name = Turtle()
+name.shape ('turtle')
+
+color = input ("What color would you like your turtle to be?")
+name.color(color)
+
+
+name.penup()
+name.goto(-160, 120)
+name.pendown()
+
+
+  
+def right():
+  name.forward(randint(5,9))
+  
+def left():
+  name.backward(randint(5,9))
+  
+  
+def get_mouse_click_coor(x, y):
+    print(x, y)
+
+  
+screen = turtle.Screen()
+
+screen.onclick(get_mouse_click_coor)
+
+
+screen.onkey(right, 'right')
+screen.onkey(left, 'left')
+
+screen.listen()
+
+
+
+comp1 = Turtle()
+comp1.shape('turtle')
+comp1.color('light blue')
+comp1.penup()
+comp1.goto(-160, 80)
+comp1.pendown()
+
+comp2 = Turtle()
+comp2.shape('turtle')
+comp2.color('firebrick')
+comp2.penup()
+comp2.goto(-160, 40)
+comp2.pendown()
+
+comp3 = Turtle()
+comp3.shape('turtle')
+comp3.color('thistle')
+comp3.penup()
+comp3.goto(-160, 0)
+comp3.pendown()
+
+comp4 = Turtle()
+comp4.shape('turtle')
+comp4.color('dark olive green')
+comp4.penup()
+comp4.goto(-160, -40)
+comp4.pendown()
+
+word = Turtle()
+word.hideturtle()
+word.penup()
+word.color('red')
+word.goto(-115, -110)
+word.write("Ready",  font=("Helvetica", 16, "normal"))
+
+word1 = Turtle()
+word1.hideturtle()
+word1.penup()
+word1.color('red')
+word1.goto(-42, -119)
+word1.write("Set", font= ("Helvetica", 16, "normal"))
+
+word2 = Turtle()
+word2.hideturtle()
+word2.penup()
+word2.color('red')
+word2.goto(7, -145)
+word2.write("Go!!", font= ("Helvetica", 25, "normal"))
+
+time.sleep(0.7)
+
+
+for move in range (15):
+  comp1.forward(randint(7,11))
+  comp2.forward(randint(7,11))
+  comp3.forward(randint(7,11))
+  comp4.forward(randint(7,11))
+  
+
+  
+
+
+
+  
+screen.mainloop()
+
+
+
+
+
+
+
