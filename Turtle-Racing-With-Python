@@ -113,11 +113,6 @@ for move in range (15):
   comp3.forward(randint(7,11))
   comp4.forward(randint(7,11))
   
-
-  
-
-
-
   
 screen.mainloop()
 
